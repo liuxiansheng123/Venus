@@ -1,0 +1,252 @@
+﻿@{
+    ViewBag.Title = "View1";
+}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>维纳斯之吻</title>
+    <link href="/QQ/css/lanren.css" type="text/css" rel="stylesheet" />
+
+
+
+    <style>
+        #file_btn {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 5;
+            width: 100px;
+            height: 50px;
+            padding: 10px 20px;
+            filter: alpha(opacity=0);
+            -webkit-opacity: 0;
+            -moz-opacity: 0;
+            opacity: 0;
+            background: #ffffff;
+        }
+
+        S #file_btn_replace {
+            position: relative;
+            z-index: 2;
+            width: 100px;
+            height: 50px;
+            padding: 10px 20px;
+            border: 1px dashed #eee9e9;
+            color: #aaa;
+            font-size: 12px;
+            background: #ffffff;
+        }
+
+        #image {
+            position: relative;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 代码部分begin -->
+    <div id="rightArrow"><a href="javascript:;" title="在线客服"></a></div>
+    <div id="floatDivBoxs">
+        <div class="floatDtt">在线客服</div>
+        <div class="floatShadow">
+            <ul class="floatDqq">
+                <li><a target="_blank" href="tencent://message/?uin=249676990&Site=sc.chinaz.com&Menu=yes" title="在线客服"><img src="/QQ/images/qq.png" align="absmiddle" />在线客服1号</a></li>
+                <li> <a href="tencent://message/?uin=2078838570&Site=sc.chinaz.com&Menu=yes" title="在线客服"><img src="/QQ/images/qq.png" align="absmiddle" />在线客服2号</a></li>
+                <li><a target="_blank" href="tencent://message/?uin=13120369677&Site=sc.chinaz.com&Menu=yes" title="在线客服"><img src="/QQ/images/qq.png" align="absmiddle" />在线客服3号</a></li>
+            </ul>
+        </div>
+        <div class="floatDbg"></div>
+    </div>
+    <script src="/QQ/js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function () {
+            var flag = 0;
+            $('#rightArrow').on("click", function () {
+                if (flag == 1) {
+                    $("#floatDivBoxs").animate({ right: '-175px' }, 300);
+                    $(this).animate({ right: '-5px' }, 300);
+                    $(this).css('background-position', '-50px 0');
+                    flag = 0;
+                } else {
+                    $("#floatDivBoxs").animate({ right: '0' }, 300);
+                    $(this).animate({ right: '170px' }, 300);
+                    $(this).css('background-position', '0px 0');
+                    flag = 1;
+                }
+            });
+
+        });
+    </script>
+    <!-- 代码部分end -->
+
+</body>
+</html>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta property="wb:webmaster" content="973d669418f79e8b" />
+<meta name="keywords" />
+<meta name="description" />
+<div>
+    <link href="~/Content/BootstrapSouce/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Content/BootstrapSouce/js/jquery.min.js"></script>
+    <script src="~/Content/BootstrapSouce/js/bootstrap.min.js"></script>
+    <link href="~/Content/lib.8551015b.css" rel="stylesheet" />
+    <link href="~/Content/index.5445dff6.css" rel="stylesheet" />
+    <script src="~/Content/index.a7354aa4.js"></script>
+    <style type="text/css">
+        #header {
+            font-size: 12px;
+        }
+
+        #dt-logo {
+            float: left;
+            position: relative;
+            width: 140px;
+            height: 64px;
+            background: url('/images/184307146910491.png') 12px no-repeat;
+            text-indent: -9999px;
+            max-width: 150px;
+        }
+
+        div {
+            font: normal 100% Helvetica, Arial, sans-serif;
+        }
+    </style>
+
+    <div id="header">
+        <div id="header-wrap">
+            <div id="dt-header" style="width:100%">
+                <div class="dt-wrap">
+                    <div id="dt-logo">维纳斯之吻</div>
+                    <div id="dt-header-right">
+                        <div style="float:right;margin-top:9px;  margin-left:5px;" class="col-md-2">
+                            <ul class="nav nav-pills">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">用户名<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a onclick="userye()">个人主页</a></li>
+                                        <li><a href="#" onclick="wor()">我的作品</a></li>
+                                        <li><a href="#" onclick="ver()">我的评论</a></li>
+                                        <li><a href="#" onclick="col()">我的收藏</a></li>
+                                        <li><a onclick="usertui()">退出登录</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="dt-vline"></div>
+                        <a id="dt-login" class="dt-head-cat" href="/Userinfo/index" data-next="/">登录</a>
+                        <div class="dt-vline"></div>
+                        <a id="dt-register" class="dt-btn dt-head-cat" href="/Userinfo/Register">注册</a>
+                        <div class="dt-vline"></div>
+
+                        <div class="dt-has-menu dt-head-cat">
+                            <button class="" onclick="AddYe()" style="background-color:#ffffff; border:hidden" data-toggle="modal" data-target="#myModal">
+                                发布作品
+                            </button>
+                            <span class="dt-dreamer">new</span>
+                        </div>
+                        <div class="dt-vline"></div>
+                        <a id="dt-login" class="dt-head-cat" style="position:relative" href="/Works/show/0" data-next="/">所有作品</a>
+                        <div class="dt-vline"></div>
+                        <a id="dt-login" class="dt-head-cat" style="position:relative" href="/Works/show/1" data-next="/">最热作品</a>
+                        <div class="dt-vline"></div>
+                        <a id="dt-login" class="dt-head-cat" style="position:relative" href="/Works/show/2" data-next="/">最新作品</a>
+                        <div style="position:relative" class="dt-vline"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="dt-header-btm"></div>
+        </div>
+
+    </div>
+</div>
+
+<!--模太框-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:500px;height:400px;">
+            @using (Html.BeginForm("pictures", "Works", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
+            {
+                @*头部*@
+                <div class="modal-header">
+                    <img src="~/Content/发布作品2.png" />
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                </div>
+                @*主题*@
+                <div class="modal-body">
+                    <div id="image">
+                        <input type="file" name="image" id="file_btn" />
+                        <button id="file_btn_replace" class="btn" style=" border:1px dashed #eee9e9;height:50px; width:100px; background-color:#ffffff">选择图片</button>
+                    </div>
+                    <div style="margin-top:5px">
+                        <input type="text" id="Worksname" name="Worksname" style="margin-top:3px" placeholder="填写标题" /><br />
+                        <textarea id="Workscontent" name="Workscontent" rows="5" cols="50" style="margin-top:5px" placeholder=写点内容，让更多人喜欢ta></textarea>
+                    </div>
+                </div>
+                @*底部*@
+                <div class="modal-footer">
+                    <button type="button" id="button1" onclick="tijiao()" class="btn">
+                        发布
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<!--表单提交-->
+<script>
+    function tijiao() {
+        var id = $("#file_btn").val();
+        if (id == "") {
+            alert("请选图片");
+            return;
+        }
+        $("#form1").submit();
+    }
+
+
+
+</script>
+
+
+
+
+
+<div>
+    @RenderBody()
+</div>
+
+<script>
+    function userye() {
+        $.ajax({
+            type: "post",
+            url: "/UserHome/fou",
+            success: function (res) {
+                if (res > 0) {
+                    location.href = "/userhome/index";
+                } else {
+                    location.href = "/userinfo/index";
+                }
+            }
+        })
+    }
+    function usertui() {
+        $.ajax({
+            type: "post",
+            url: "/UserHome/tui",
+            success: function (res) {
+                if (res > 0) {
+                    location.href = "/home/index";
+                }
+            }
+        })
+    }
+</script>

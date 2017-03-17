@@ -1,0 +1,304 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/View1.cshtml";
+}
+
+
+
+
+
+<style>
+    .img-responsive {
+        display: inline-block;
+        height: 300px;
+        max-width: 100%;
+    }
+
+    #Userinfo {
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 50px;
+        padding-top: 5px;
+    }
+
+    p {
+        max-width: 100%;
+        height: 50px;
+        margin: 10px;
+    }
+
+    span {
+        display: inline-block;
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    table {
+        color: #808080;
+        font-size: 25px;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    ul.nav-tabs {
+        width: 140px;
+        margin-top: 20px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    }
+
+        ul.nav-tabs li {
+            margin: 0;
+            border-top: 1px solid #ddd;
+        }
+
+            ul.nav-tabs li:first-child {
+                border-top: none;
+            }
+
+            ul.nav-tabs li a {
+                margin: 0;
+                padding: 8px 16px;
+                border-radius: 0;
+            }
+
+            ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover {
+                color: #fff;
+                background: #0088cc;
+                border: 1px solid #0088cc;
+            }
+
+            ul.nav-tabs li:first-child a {
+                border-radius: 4px 4px 0 0;
+            }
+
+            ul.nav-tabs li:last-child a {
+                border-radius: 0 0 4px 4px;
+            }
+
+        ul.nav-tabs.affix {
+            top: 30px; /* Set the top position of pinned element */
+        }
+
+    .txt {
+        height: 10px;
+    }
+
+    .col-md-3 {
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    }
+
+    div {
+        background-color: white;
+    }
+</style>
+<title>用户界面</title>
+<script>
+    //页面加载
+    $(function () {
+        load();
+    })
+    ///用户信息显示
+    function load() {
+        $.ajax({
+            type: "post",
+            url: "/UserHome/user",
+            data: {
+                id: 2
+            },
+            dataType: "Json",
+            success: function (item) {
+                var str = "";
+                $(item.datalist).each(function (i, obj) {
+                    str += "<table><tr><td>用户信息</td><td></td></tr><tr><td>用户名</td><td>";
+                    str += obj.Username;
+                    str += "</td></tr><tr><td>昵称</td><td>";
+                    str += obj.Usercheng;
+                })
+                str += "</td></tr><tr><td>我的作品</td><td>";
+                str += item.Workscount;
+                str += "</td></tr><tr><td>未审核作品</td><td>";
+                str += item.NotWorkscount;
+                str += "</td></tr><tr><td>已审核作品</td><td>";
+                str += item.auditWorkscount;
+                str += "</td></tr><tr><td>我的收藏</td><td>";
+                str += item.Collectcount;
+                str += "</td></tr><tr><td>我的评论</td><td>";
+                str += item.Reviewcount;
+                str += "</td></tr><tr><td><input type='button' class='btn' style='font-size:10px;background-color:#ff6a00;color:white;' value='编辑资料' onclick='upd()'/></td><td></td></tr></table>";
+                $("#Userin").html(str);
+            }
+        })
+    }
+    ///用户信息修改
+    function upd() {
+        $.ajax({
+            type: "post",
+            url: "/UserHome/userinfo",
+            data: {
+                id: 2
+            },
+            dataType: "Json",
+            success: function (item) {
+                var str = "";
+                var l = 0;
+                $(item).each(function (i, obj) {
+                    $("#Userinfo").empty();
+                    str += "<form id='for' action='/UserHome/upda' method='post'><table><tr><td>用户信息</td><td></td></tr><tr><td>用户名</td><td>";
+                    str += obj.Username;
+                    str += "</td><td></td></tr><tr><td>用户昵称</td><td>";
+                    str += "<input name='Usercheng' id='Usercheng' type='text' value=" + obj.Usercheng + ">";
+                    str += "</td></tr><tr><td>用户密码</td><td>";
+                    str += "<input name='Userpwd' id='Userpwd' type='text' value=" + obj.Userpwd + ">";
+                    str += "</td></tr><tr><td>用户性别</td><td>";
+                    l = obj.Usersex;
+                    if (l == 1) {
+                        str += "<input id='sexnan' name='Usersex'  type='radio' value='男' checked='checked' onclick='sexcl()'>&nbsp;男&nbsp;&nbsp;&nbsp;<input id='sexnv' name='Usersex'  type='radio' value='女' onclick='sexcl()'>&nbsp;女";
+                    }
+                    else {
+                        str += "<input id='sexnan' name='Usersex'  type='radio' value='男' onclick='sexcl()'>&nbsp;男&nbsp;&nbsp;&nbsp;<input id='sexnv' name='Usersex'  type='radio' value='女' checked='checked' onclick='sexcl()'>&nbsp;女";
+                    }
+                    str += "</td></tr><tr><td><button type='button' id='sub' onclick='upda()' class='btn btn-success'>保存</button></td><td><a href='/UserHome/index' type='button' class='btn btn-success'>返回</a></td></tr></table></form>";
+                    $("#Userinfo").html(str);
+                })
+            }
+        })
+    }
+    var sex = '';
+    function sexcl()
+    {
+        
+        if ($("#sexnan").checked() === true) {
+            sex = $("#sexnan").val();
+        }
+        else {
+            sex = $("#sexnv").val();
+        }
+    }
+    ///判断男女
+    function upda() {
+        
+
+        $.ajax({
+            type: "post",
+            url: "/UserHome/upda",
+            data: {
+                cheng: $("#Usercheng").val(),
+                pwd: $("#Userpwd").val(),
+                sex: sex
+            },
+            success: function (res) {
+                if (res > 0) {
+                    alert("修改完成");
+                    location.href = "/userhome/index";
+                } else {
+                    alert("少年你的网呢...")
+                }
+            }
+        })
+    }
+    ///我的作品显示
+    function wor() {
+        $.ajax({
+            type: "post",
+            url: "/UserHome/Works",
+            data: {
+                id: 2
+            },
+            dataType: "Json",
+            success: function (item) {
+                var str = "";
+                var l = 0;
+                $(item).each(function (i, obj) {
+                    $("#Userinfo").empty();
+
+                    str += "<div class='col-md-3' onclick='loctshow(" + obj.Worksid + ")' ><div id='di'><span>";
+                    str += obj.Worksname;
+                    str += "</span></div><div id='di'><img src='";
+                    str += obj.Worksurl;
+                    str += "' class='img-responsive'/></div><div id='di'><p>";
+                    str += obj.Workcontent;
+                    str += "</p></div></div>";
+
+
+                    $("#Userinfo").html(str);
+                })
+            }
+        })
+
+    }
+    ///跳转详情页面
+    function loctshow(i) {
+        location.href = "/Home/show";
+    }
+    ///我的收藏显示
+    function col() {
+        $.ajax({
+            type: "post",
+            url: "/UserHome/Collect",
+            dataType: "Json",
+            success: function (item) {
+                var str = "";
+                $(item).each(function (i, obj) {
+                    str += "<div class='col-md-3' onclick='loctshow(" + obj.Worksid + ")' ><div id='di'><span>";
+                    str += obj.Worksname;
+                    str += "</span></div><div id='di'><img src='";
+                    str += obj.Worksurl;
+                    str += "' class='img-responsive'/></div><div id='di'><p>";
+                    str += obj.Workcontent;
+                    str += "</p></div></div>";
+                    $("#Userinfo").html(str);
+                })
+            }
+        })
+    }
+    ///我的评论显示
+    function ver() {
+        $.ajax({
+            type: "post",
+            url: "/UserHome/Review",
+            dataType: "Json",
+            success: function (item) {
+                var str = "";
+                $(item).each(function (i, obj) {
+                    str += "<div class='col-md-3' onclick='loctshow(" + obj.Worksid + ")' ><div id='di'><span>";
+                    str += obj.Worksname;
+                    str += "</span></div><div id='di'><img src='";
+                    str += obj.Worksurl;
+                    str += "' class='img-responsive'/></div><div id='di'><p>";
+                    str += obj.Workcontent;
+                    str += "</p></div></div>";
+                    $("#Userinfo").html(str);
+                })
+            }
+        })
+    }
+</script>
+
+
+
+<div class="container">
+
+
+    <div class="row">
+
+
+
+        <div class="col-md-12" style="height: 400px;margin-top:20px;text-align:center" id="Userinfo">
+           
+            <div style="height: 300px;margin:20px 10px 0px 175px;text-align:center;float:left" id="Userin">
+
+                
+
+            </div>
+            <div style='background-image:url(/tupian/20140120184024_KHduw.thumb.712_356_c.jpeg);height:300px;width:600px;background-repeat:no-repeat;margin-top:20px;float:left'></div>
+
+        </div>
+    </div>
+
+</div>
+

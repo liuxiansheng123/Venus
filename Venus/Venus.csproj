@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60CFA04E-D688-49F4-9E91-916EBE3F6C64}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Venus</RootNamespace>
+    <AssemblyName>Venus</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserHomeController.cs" />
+    <Compile Include="Controllers\UserinfoController.cs" />
+    <Compile Include="Controllers\WorksController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\BootstrapSouce\css\bootstrap-theme.css" />
+    <Content Include="Content\BootstrapSouce\css\bootstrap-theme.min.css" />
+    <Content Include="Content\BootstrapSouce\css\bootstrap.css" />
+    <Content Include="Content\BootstrapSouce\css\bootstrap.min.css" />
+    <Content Include="Content\BootstrapSouce\css\liifang.css" />
+    <Content Include="Content\BootstrapSouce\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\BootstrapSouce\js\bootstrap.js" />
+    <Content Include="Content\BootstrapSouce\js\bootstrap.min.js" />
+    <Content Include="Content\BootstrapSouce\js\html5shiv.js" />
+    <Content Include="Content\BootstrapSouce\js\jquery.js" />
+    <Content Include="Content\BootstrapSouce\js\jquery.min.js" />
+    <Content Include="Content\BootstrapSouce\js\npm.js" />
+    <Content Include="Content\BootstrapSouce\js\respond.min.js" />
+    <Content Include="Content\hm.js" />
+    <Content Include="Content\index.5445dff6.css" />
+    <Content Include="Content\index.a7354aa4.js" />
+    <Content Include="Content\jquery.masonry.min.js" />
+    <Content Include="Content\lib.8551015b.css" />
+    <Content Include="Content\lib.bundle.a6ecd17d.js" />
+    <Content Include="Content\particulars\detail.46571e9b.css" />
+    <Content Include="Content\particulars\detail.ef959c75.js" />
+    <Content Include="Content\particulars\hm.js" />
+    <Content Include="Content\particulars\lib.8551015b.css" />
+    <Content Include="Content\particulars\lib.bundle.a6ecd17d.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\userhu.css" />
+    <Content Include="Content\Userinfo\css\common.css" />
+    <Content Include="Content\Userinfo\css\reset.css" />
+    <Content Include="Content\Userinfo\img\logowz.png" />
+    <Content Include="Content\Userinfo\img\logo_bg.jpg" />
+    <Content Include="Content\Userinfo\js\common.js" />
+    <Content Include="Content\Userinfo\js\jquery.min.js" />
+    <Content Include="Content\发布作品2.png" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\BootstrapSouce\css\bootstrap-theme.css.map" />
+    <Content Include="Content\BootstrapSouce\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\BootstrapSouce\css\bootstrap.css.map" />
+    <Content Include="Content\BootstrapSouce\css\bootstrap.min.css.map" />
+    <Content Include="Content\BootstrapSouce\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\BootstrapSouce\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\BootstrapSouce\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\BootstrapSouce\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="images\17150205419370.png" />
+    <Content Include="images\1843071090131119.png" />
+    <Content Include="images\184307146910491.png" />
+    <Content Include="images\58a65e75N2dd6dff7.jpg" />
+    <Content Include="images\58a65e82N7b6629ca.jpg" />
+    <Content Include="images\58a65e83Nc0fc82c6.jpg" />
+    <Content Include="images\6.png" />
+    <Content Include="images\l.png" />
+    <Content Include="images\r.png" />
+    <Content Include="images\slide1.jpg" />
+    <Content Include="images\slide2.jpg" />
+    <Content Include="QQ\images\online_phone.psd" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="QQ\css\lanren.css" />
+    <Content Include="QQ\images\erweima.jpg" />
+    <Content Include="QQ\images\online_arrow.jpg" />
+    <Content Include="QQ\images\online_botbg.jpg" />
+    <Content Include="QQ\images\online_phone.jpg" />
+    <Content Include="QQ\images\qq.png" />
+    <Content Include="QQ\js\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="test\css\style.css" />
+    <Content Include="test\images\web_heart_animation.png" />
+    <Content Include="test\js\jquery-1.11.0.min.js" />
+    <Content Include="tupian\20120722123010_Jtewd.thumb.700_0.jpg" />
+    <Content Include="tupian\20130214154300_BicyM.thumb.700_0.jpg" />
+    <Content Include="tupian\20131009203550_NF3yS.thumb.700_0.jpg" />
+    <Content Include="tupian\20131017143456_BL8mx.thumb.700_0.jpg" />
+    <Content Include="tupian\20140521091459_M8tiJ.thumb.700_0.jpg" />
+    <Content Include="tupian\20140621211159_FFfff.thumb.700_0.jpg" />
+    <Content Include="tupian\20140621231634_FiXYu.thumb.700_0.jpg" />
+    <Content Include="tupian\20140817055256_RFMBA.thumb.700_0.jpg" />
+    <Content Include="tupian\20140817060554_xSwHn.thumb.700_0.jpg" />
+    <Content Include="tupian\20140902211020_QNJ8r.thumb.700_0.jpg" />
+    <Content Include="tupian\20141010211125_tikmJ.thumb.700_0.jpg" />
+    <Content Include="tupian\20141107194907_y5iNY.thumb.700_0.jpg" />
+    <Content Include="tupian\20141122150251_UEZLz.thumb.700_0.jpg" />
+    <Content Include="tupian\20141122224459_G5TtF.thumb.700_0.jpg" />
+    <Content Include="tupian\20141125142051_fcuwd.thumb.700_0.jpg" />
+    <Content Include="tupian\20141206095153_MwQRf.thumb.700_0.jpg" />
+    <Content Include="tupian\20141209234951_BVMvM.thumb.700_0.jpg" />
+    <Content Include="tupian\20141211195635_4vtGi.thumb.700_0.jpg" />
+    <Content Include="tupian\20150106200457_MaYKA.thumb.700_0.jpg" />
+    <Content Include="tupian\20150207120102_CTSUN.thumb.700_0.jpg" />
+    <Content Include="tupian\20150304223525_udZRP.thumb.700_0.jpg" />
+    <Content Include="tupian\20150305120645_5CxEd.thumb.700_0.jpg" />
+    <Content Include="tupian\20150307112702_8JPTh.thumb.700_0.jpg" />
+    <Content Include="tupian\20150311172407_VPnYC.thumb.700_0.jpg" />
+    <Content Include="tupian\20150319212011_MRMBX.thumb.700_0.jpg" />
+    <Content Include="tupian\20150324175007_aT3Nj.thumb.700_0.jpg" />
+    <Content Include="tupian\20150330173318_4RKjf.thumb.700_0.jpg" />
+    <Content Include="tupian\20150331214919_uMC5H.thumb.700_0.jpg" />
+    <Content Include="tupian\20150415H4543_is3Ga.thumb.700_0.jpg" />
+    <Content Include="tupian\20150418H0842_UsvmK.thumb.700_0.jpg" />
+    <Content Include="tupian\20150429182621_XNmWr.thumb.700_0.jpg" />
+    <Content Include="tupian\20150508191025_rfLYw.thumb.700_0.jpg" />
+    <Content Include="tupian\20150513192608_dSCx5.thumb.700_0.jpg" />
+    <Content Include="tupian\20150628150137_B4jGP.thumb.700_0.jpg" />
+    <Content Include="tupian\20150630093935_QyxMz.thumb.700_0.jpg" />
+    <Content Include="tupian\20150703161018_8UkZ5.thumb.700_0.jpg" />
+    <Content Include="tupian\20150706104428_H5WnU.thumb.700_0.jpg" />
+    <Content Include="tupian\20150712141444_f3zT5.thumb.700_0.jpg" />
+    <Content Include="tupian\20150712141713_2NV8W.thumb.700_0.jpg" />
+    <Content Include="tupian\20150712141743_SM5WY.thumb.700_0.jpg" />
+    <Content Include="tupian\20150712141751_kNfQU.thumb.700_0.jpg" />
+    <Content Include="tupian\20150712141807_PYfMw.thumb.700_0.jpg" />
+    <Content Include="tupian\20150714003845_MmQRs.thumb.700_0.jpg" />
+    <Content Include="tupian\20150714003950_RBTv4.thumb.700_0.jpg" />
+    <Content Include="tupian\20150714004920_EG4df.thumb.700_0.jpg" />
+    <Content Include="tupian\20150715125314_RxJZk.thumb.700_0.jpg" />
+    <Content Include="tupian\20150716204822_e8ryk.thumb.700_0.jpg" />
+    <Content Include="tupian\20150718174510_atKJM.thumb.700_0.jpg" />
+    <Content Include="tupian\20150726073242_hStUT.thumb.700_0.jpg" />
+    <Content Include="tupian\20150727092925_cTNZY.thumb.700_0.jpg" />
+    <Content Include="tupian\20150727093016_WGkES.thumb.700_0.jpg" />
+    <Content Include="tupian\20150730110558_NKnwJ.thumb.700_0.jpg" />
+    <Content Include="tupian\20150730110611_TkwM2.thumb.700_0.jpg" />
+    <Content Include="tupian\20150730110711_PWvKi.thumb.700_0.jpg" />
+    <Content Include="tupian\20150730110851_f5UkM.thumb.700_0.jpg" />
+    <Content Include="tupian\20150730110928_UNVXH.thumb.700_0.jpg" />
+    <Content Include="tupian\20150802183308_yKmBR.thumb.700_0.jpg" />
+    <Content Include="tupian\20150809211014_kPrnX.thumb.700_0.jpg" />
+    <Content Include="tupian\20150809211248_tfeFm.thumb.700_0.jpg" />
+    <Content Include="tupian\20150809211259_HunA2.thumb.700_0.jpg" />
+    <Content Include="tupian\20150809211326_QYC3Z.thumb.700_0.jpg" />
+    <Content Include="tupian\20150814093309_BrNYs.thumb.700_0.jpg" />
+    <Content Include="tupian\20150816205243_X5UPa.thumb.700_0.jpg" />
+    <Content Include="tupian\20150818112348_hxnuN.thumb.700_0.jpg" />
+    <Content Include="tupian\20150819160034_sKdQA.thumb.700_0.jpg" />
+    <Content Include="tupian\20150824211605_5ASJj.thumb.700_0.jpg" />
+    <Content Include="tupian\20150824211925_uQH5Z.thumb.700_0.jpg" />
+    <Content Include="tupian\20150825215829_VhkC4.thumb.700_0.jpg" />
+    <Content Include="tupian\20150828145136_fK2V3.thumb.700_0.jpg" />
+    <Content Include="tupian\20150831182321_ZrTYK.thumb.700_0.jpg" />
+    <Content Include="tupian\20150831194728_HJeCn.thumb.700_0.jpg" />
+    <Content Include="tupian\20150905104835_H3TxM.thumb.700_0.jpg" />
+    <Content Include="tupian\20150914223920_yuWV2.thumb.700_0.jpg" />
+    <Content Include="tupian\20150914223954_iJu3W.thumb.700_0.jpg" />
+    <Content Include="tupian\20150917011933_s4NxH.thumb.700_0.jpg" />
+    <Content Include="tupian\20150920114117_XsEG5.thumb.700_0.jpg" />
+    <Content Include="tupian\20150922235939_ezh8k.thumb.700_0.jpg" />
+    <Content Include="tupian\20151101113549_G8njs.thumb.700_0.jpg" />
+    <Content Include="tupian\20151101164711_5PLUw.thumb.700_0.jpg" />
+    <Content Include="tupian\20151101204822_rhJYQ.thumb.700_0.jpg" />
+    <Content Include="tupian\20151112010709_xh3rt.thumb.700_0.jpg" />
+    <Content Include="tupian\20151201221856_cFidW.thumb.700_0.jpg" />
+    <Content Include="tupian\20151216210054_viZBE.thumb.700_0.jpg" />
+    <Content Include="tupian\20151219103751_J8njd.thumb.700_0.jpg" />
+    <Content Include="tupian\20160106235143_AFwTa.thumb.700_0.jpg" />
+    <Content Include="tupian\20160112003054_vJkCY.thumb.700_0.jpg" />
+    <Content Include="tupian\20160114221909_CZrkH.thumb.700_0.jpg" />
+    <Content Include="tupian\20160115073625_2PxnC.thumb.700_0.jpg" />
+    <Content Include="tupian\20160115195526_fc4ns.thumb.700_0.jpg" />
+    <Content Include="tupian\20160118113856_AemMk.thumb.700_0.jpg" />
+    <Content Include="tupian\20160118113934_wCEcK.thumb.700_0.jpg" />
+    <Content Include="tupian\20160118113944_4ZtCQ.thumb.700_0.jpg" />
+    <Content Include="tupian\20160118113952_yCuSa.thumb.700_0.jpg" />
+    <Content Include="tupian\20160119095338_8nJ3N.thumb.700_0.jpg" />
+    <Content Include="tupian\20160122224425_KZ4tM.thumb.700_0.jpg" />
+    <Content Include="tupian\20160202103822_fC5tP.thumb.700_0.jpg" />
+    <Content Include="tupian\20160203184820_RcmfC.thumb.700_0.jpg" />
+    <Content Include="tupian\20160214012753_Pr2ZX.thumb.700_0.jpg" />
+    <Content Include="tupian\20160217100645_RA8w5.thumb.700_0.jpg" />
+    <Content Include="tupian\20160217113834_HvWSy.thumb.700_0.jpg" />
+    <Content Include="tupian\20160218144132_naBCi.thumb.700_0.jpg" />
+    <Content Include="tupian\20160221194946_TVXrs.thumb.700_0.jpg" />
+    <Content Include="tupian\20160228000325_anAVU.thumb.700_0.jpg" />
+    <Content Include="tupian\20160228000352_LuNSX.thumb.700_0.jpg" />
+    <Content Include="tupian\20160228000443_CeYtK.thumb.700_0.jpg" />
+    <Content Include="tupian\20160302013731_zmCVL.thumb.700_0.jpg" />
+    <Content Include="tupian\20160411204649_GUckA.thumb.700_0.jpg" />
+    <Content Include="tupian\20160411204737_QyFUd.thumb.700_0.jpg" />
+    <Content Include="tupian\20160425234830_N8vPT.thumb.700_0.jpg" />
+    <Content Include="tupian\20160601151438_2s4ma.thumb.700_0.jpg" />
+    <Content Include="tupian\20160604220705_Y5tiN.thumb.700_0.jpg" />
+    <Content Include="tupian\20160613141127_MGzWx.thumb.700_0.jpg" />
+    <Content Include="tupian\20160617112349_AnWkN.thumb.700_0.jpg" />
+    <Content Include="tupian\20160623083534_Z3rsh.thumb.700_0.jpg" />
+    <Content Include="tupian\20160708114241_MaJsN.thumb.700_0.jpg" />
+    <Content Include="tupian\20160718123123_KGLiv.thumb.700_0.jpg" />
+    <Content Include="tupian\20160822104817_jMwKW.thumb.700_0.jpg" />
+    <Content Include="tupian\20160915162520_CS58W.thumb.700_0.jpg" />
+    <Content Include="tupian\20160918095325_rVvne.thumb.700_0.jpg" />
+    <Content Include="tupian\20160922161700_NYAQk.thumb.700_0.jpg" />
+    <Content Include="tupian\20160922161727_atmYV.thumb.700_0.jpg" />
+    <Content Include="tupian\20160922161947_zEZfQ.thumb.700_0.jpg" />
+    <Content Include="tupian\20160925223431_uVHyY.thumb.700_0.jpg" />
+    <Content Include="tupian\20161012221959_Q3tMh.thumb.700_0.jpg" />
+    <Content Include="tupian\20161107213249_Lv3QV.thumb.700_0.jpg" />
+    <Content Include="tupian\20161119192110_CYJTu.thumb.700_0.jpg" />
+    <Content Include="tupian\20161122202636_fsNVc.thumb.700_0.jpg" />
+    <Content Include="tupian\20161206080813_BXuMa.thumb.700_0.jpg" />
+    <Content Include="tupian\20161207214739_YFQNS.thumb.700_0.jpg" />
+    <Content Include="tupian\20161211060935_nNywm.thumb.700_0.jpg" />
+    <Content Include="tupian\20161217183717_MLvj3.thumb.700_0.jpg" />
+    <Content Include="tupian\20161219102129_cuTxs.thumb.700_0.jpg" />
+    <Content Include="tupian\20161228042402_2thaZ.thumb.700_0.jpg" />
+    <Content Include="tupian\20161229141231_muQfv.thumb.700_0.jpg" />
+    <Content Include="tupian\20161229141436_By3wi.thumb.700_0.jpg" />
+    <Content Include="tupian\20161229141445_VMZzd.thumb.700_0.jpg" />
+    <Content Include="tupian\20170107212945_erBsk.thumb.700_0.jpg" />
+    <Content Include="tupian\20170107213525_SCdsE.thumb.700_0.jpg" />
+    <Content Include="tupian\20170113114841_dmZhB.thumb.700_0.jpg" />
+    <Content Include="tupian\20170114221423_d8x5R.thumb.700_0.jpg" />
+    <Content Include="tupian\20170116000553_asYLX.thumb.700_0.jpg" />
+    <Content Include="tupian\20170119223209_X2cwS.thumb.700_0.jpg" />
+    <Content Include="tupian\20170130163159_QtKk5.thumb.700_0.jpg" />
+    <Content Include="tupian\20170130163943_nM3mS.thumb.700_0.jpg" />
+    <Content Include="tupian\20170130165640_a5mBQ.thumb.700_0.jpg" />
+    <Content Include="tupian\20170130170052_sLQtE.thumb.700_0.jpg" />
+    <Content Include="tupian\20170131163331_WTkHn.thumb.700_0.jpg" />
+    <Content Include="tupian\20170131232922_VJkyF.thumb.700_0.jpg" />
+    <Content Include="tupian\20170201195954_BZhVM.thumb.700_0.jpg" />
+    <Content Include="tupian\20170201223931_S5XEj.thumb.700_0.jpg" />
+    <Content Include="tupian\20170204213918_sAiFc.thumb.700_0.jpg" />
+    <Content Include="tupian\20170210060640_5zWsx.thumb.700_0.jpg" />
+    <Content Include="tupian\20170210200613_eLQ4a.thumb.700_0.jpg" />
+    <Content Include="tupian\20170211111713_UWAPk.thumb.700_0.jpg" />
+    <Content Include="tupian\20170211194951_vGxzr.thumb.700_0.jpg" />
+    <Content Include="tupian\20170213122611_TXxRz.thumb.700_0.jpg" />
+    <Content Include="tupian\20170214220628_TRF8k.thumb.700_0.gif" />
+    <Content Include="tupian\20170215011309_T4EZM.thumb.700_0.jpg" />
+    <Content Include="tupian\20170215212549_ARScT.thumb.700_0.jpg" />
+    <Content Include="tupian\20170217153113_ucHKB.thumb.700_0.jpg" />
+    <Content Include="tupian\20170219182435_VcYhL.thumb.700_0.jpg" />
+    <Content Include="tupian\20170220081023_aASCN.thumb.700_0.jpg" />
+    <Content Include="tupian\20170220204949_jAWRS.thumb.700_0.jpg" />
+    <Content Include="tupian\20170223135559_Xs2ir.thumb.700_0.jpg" />
+    <Content Include="tupian\20170223135718_4MAfz.thumb.700_0.jpg" />
+    <Content Include="tupian\20170224190213_nMrAa.thumb.700_0.jpg" />
+    <Content Include="tupian\20170304124006_2WFVH.thumb.700_0.gif" />
+    <Content Include="tupian\20170304131843_ntYUZ.thumb.700_0.jpg" />
+    <Content Include="tupian\20170304132058_4rYUS.jpeg" />
+    <Content Include="tupian\20170304154345_2dCMJ.thumb.700_0.jpg" />
+    <Content Include="tupian\20170304171817_iNVvU.jpeg" />
+    <Content Include="tupian\20170304194934_BziR8.thumb.700_0.jpg" />
+    <Content Include="tupian\20170304231011_s2jJe.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305114624_Rae4P.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305115700_iUexY.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305122323_vhUVZ.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305123053_WsS4T.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305135501_EhSwV.jpeg" />
+    <Content Include="tupian\20170305135627_ashvk.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305160640_SkCyP.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305164155_dryPS.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305174103_dV8Rs.jpeg" />
+    <Content Include="tupian\20170305183502_EujHe.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305194143_FNJm8.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305201227_XBt3E.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305204614_s3CSv.thumb.700_0.jpg" />
+    <Content Include="tupian\20170305212118_K83ZB.thumb.700_0.jpg" />
+    <Content Include="tupian\20170306035338_FCfGh.thumb.700_0.jpg" />
+    <Content Include="tupian\20170306104938_YLxUF.thumb.700_0.jpg" />
+    <Content Include="tupian\20170306122527_5VwfC.thumb.700_0.jpg" />
+    <Content Include="tupian\20170306150520_averw.thumb.700_0.jpg" />
+    <Content Include="tupian\20170306151031_txVR2.thumb.700_0.jpg" />
+    <Content Include="tupian\20170306151045_Vn5LF.thumb.700_0.jpg" />
+    <Content Include="tupian\20170306171051_JutWA.thumb.700_0.jpg" />
+    <Content Include="tupian\20170306172323_J3B25.thumb.700_0.jpg" />
+    <Content Include="tupian\20170306204033_ZxH5h.thumb.700_0.jpg" />
+    <Content Include="tupian\20170307112906_2YvCA.thumb.700_0.jpg" />
+    <Content Include="tupian\20170307223549_Chr4s.thumb.700_0.jpg" />
+    <Content Include="tupian\20170309104550_HRjGQ.thumb.700_0.jpg" />
+    <Content Include="tupian\20170309113308_xWtih.thumb.700_0.jpg" />
+    <Content Include="tupian\20170309185606_NUtPk.thumb.700_0.jpg" />
+    <Content Include="tupian\20170310202514_AGdBV.thumb.700_0.jpg" />
+    <Content Include="tupian\205195829_450x558.jpg" />
+    <Content Include="tupian\471613923_450x558.jpg" />
+    <Content Include="tupian\728182482.jpg" />
+    <Content Include="tupian\830104662_450x558.jpg" />
+    <Content Include="tupian\896731701_450x558.jpg" />
+    <Content Include="tupian\912759148_450x558.jpg" />
+    <Content Include="tupian\992781844_450x558.jpg" />
+    <Content Include="tupian\AM11GK2_i_2_1.jpg" />
+    <Content Include="tupian\s.jpg" />
+    <Content Include="tupian\TB12iO2GpXXXXa7XFXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB145_4OpXXXXbBXFXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB1dm5IJVXXXXcGXVXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB1ILWNPXXXXXX6apXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB1oZF8PpXXXXcEXpXXXXXXXXXX_!!0-item_pic.jpg" />
+    <Content Include="tupian\TB1qKiXKFXXXXaYXVXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB1uP_rNVXXXXc8XVXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB1wKZnNVXXXXa6XVXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB1X7oFJXXXXXajXFXXXXXXXXXX_!!0-item_pic.jpg_400x400.jpg_.webp.jpg" />
+    <Content Include="tupian\TB1xWGtOpXXXXaJaFXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB1ZuTyNXXXXXcsXVXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB22WUFaVXXXXXmXpXXXXXXXXXX_!!117235736.jpg_400x400.jpg" />
+    <Content Include="tupian\TB29jw_XXXXXXcCXFXXXXXXXXXX_!!68162394.jpg" />
+    <Content Include="tupian\TB2Btm2XmCI.eBjy1XbXXbUBFXa_!!391817269.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB2IZN8godnpuFjSZPhXXbChpXa_!!3003878339.jpg" />
+    <Content Include="tupian\TB2mL1kd39J.eBjSsppXXXAAVXa_!!804159169.jpg_400x400.jpg" />
+    <Content Include="tupian\TB2P.3ldNBmpuFjSZFDXXXD8pXa_!!918719588.jpg" />
+    <Content Include="tupian\TB2PeDSXMOI.eBjSszhXXbHvFXa_!!2820931370.jpg" />
+    <Content Include="tupian\TB2vqEyc75M.eBjSZFrXXXPgVXa_!!152092278.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB2YCMJXH1J.eBjSspnXXbUeXXa_!!872556264.jpg_430x430q90.jpg" />
+    <Content Include="tupian\TB2_z9itFXXXXb3XpXXXXXXXXXX_!!2910087648.jpg" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\show.cshtml" />
+    <Content Include="Views\Userinfo\Index.cshtml" />
+    <Content Include="Views\Userinfo\Register.cshtml" />
+    <Content Include="Views\UserHome\Index.cshtml" />
+    <Content Include="Views\Works\Index.cshtml" />
+    <Content Include="Views\Shared\View1.cshtml" />
+    <Content Include="Views\Works\show.cshtml" />
+    <Content Include="Views\Home\test.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VBLL\VBLL.csproj">
+      <Project>{0e7ce73d-455f-44b1-ade1-9eacfad475b0}</Project>
+      <Name>VBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VMODEL\VMODEL.csproj">
+      <Project>{5f1562db-c71e-4df5-bd32-d5c818ef7525}</Project>
+      <Name>VMODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1153</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1153/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

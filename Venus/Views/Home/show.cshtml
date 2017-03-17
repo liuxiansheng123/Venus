@@ -1,0 +1,352 @@
+﻿@{
+    ViewBag.Title = "show";
+    Layout = "~/Views/Shared/View1.cshtml";
+}
+@using VMODEL;
+@{
+    WorksModel item = Model as WorksModel;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>作品详情</title>
+    <link href="http://www.duitang.com/favicon.ico" rel="SHORTCUT ICON">
+    <link href="~/Content/particulars/lib.8551015b.css" rel="stylesheet" />
+    <link href="~/Content/particulars/detail.46571e9b.css" rel="stylesheet" />
+    <script src="~/Content/particulars/hm.js"></script>
+    <link href="~/test/css/style.css" rel="stylesheet" />
+    <script src="~/test/js/jquery-1.11.0.min.js"></script>
+
+    <script type="text/javascript">
+        var USER = {},
+        BIND_SITES = {};
+        USER.ID = 14299759;
+        USER.username = "好吧强强强强";
+        USER.smallAvatar = "https://b-ssl.duitang.com/uploads/people/201703/10/20170310200221_CsnxR.thumb.48_48_c.jpeg";
+        USER.isCertifyUser = false;
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('body').on("click", '.heart', function () {
+
+                var A = $(this).attr("id");
+                var B = A.split("like");
+                var messageID = B[1];
+                var C = parseInt($("#likeCount" + messageID).html());
+                $(this).css("background-position", "")
+                var D = $(this).attr("rel");
+
+                if (D === 'like') {
+                    $("#likeCount" + messageID).html(C + 1);
+                    $(this).addClass("heartAnimation").attr("rel", "unlike");
+
+                }
+                else {
+                    $("#likeCount" + messageID).html(C - 1);
+                    $(this).removeClass("heartAnimation").attr("rel", "like");
+                    $(this).css("background-position", "left");
+                }
+
+
+            });
+
+
+        });
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?d8276dcc8bdfef6bb9d5bc9e3bcfcaf4";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script src="~/Content/particulars/lib.bundle.a6ecd17d.js"></script>
+
+
+    <style type="text/css">
+        .thumbs_content {
+            width: 291px;
+            margin: 0 auto;
+        }
+
+        .thumbs_button {
+            float: left;
+            width: 145px;
+            text-align: center;
+            margin: 5px auto;
+            height: 45px;
+            line-height: 45px;
+            background-color: #444;
+            color: #fbfbfb;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s;
+            border-radius: 0 0 0 25px;
+            -webkit-border-radius: 0 0 0 25px;
+            -moz-border-radius: 0 0 0 25px;
+            -o-border-radius: 0 0 0 25px;
+        }
+
+        .reward_button {
+            float: left;
+            width: 145px;
+            text-align: center;
+            margin: 5px auto;
+            height: 45px;
+            line-height: 45px;
+            background-color: #cd4450;
+            color: #fbfbfb;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border-left: 1px solid #fbfbfb;
+            transition: all 0.3s;
+            border-radius: 0 25px 0 0;
+            -webkit-border-radius: 0 25px 0 0;
+            -moz-border-radius: 0 25px 0 0;
+            -o-border-radius: 0 25px 0 0;
+        }
+
+            .thumbs_button:hover, .reward_button:hover {
+                opacity: 0.8;
+                font-size: 18px;
+            }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+    <div id="content">
+        <div class="layer" id="mdata">
+            <div class="htube-a" id="detailcnt">
+                <div class="album-header-bg-mask" style="height:99999px"></div>
+                <div class="center">
+                    <div class="detailinfo" id="detailinfo" data-exp="{&quot;none&quot;:&quot;0&quot;}" style="width:432px">
+                        <div class="detail" id="pgdetail">
+                            <div style="width: 432px; height: 64px;">
+                                <div class="info-move-scroll" style="position: relative; bottom: auto; z-index: 800; width: 432px; height: 64px; left: 0px; right: auto; top: 0px;">
+                                    <div class="SG-sidecont">
+                                        <div id="pg-detitle" class="de-title">
+                                            <div class="action collection" style="float:left;border: solid;border-color: rgba(0, 0, 0, 0.067);">
+                                                <input type="button" value="收藏" />
+                                                <!--这里写收藏按钮-->
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="de-img" style="width:432px;height:488px">
+                                <a class="img-out" href="#">
+                                    <img id="mbpho-img" class="js-favorite-blogimg" src="@item.Worksurl" style="width:400px ;height:488px" data-width="328" data-height="400">
+                                </a>
+                                <a class="vieworg" href="#" style="display: none;"></a>
+                            </div>
+                            <div class="de-desc">
+                                <h1 class="js-favorite-blogtit">
+                                    @item.Workcontent
+                                </h1>
+                            </div>
+                            <div class="de-address">
+
+                            </div>
+                        </div>
+                        <div class="de-tag">
+                            <span id="mbtagsrm">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="de-num">
+                        <div class="de-num-inner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="htube-b">
+                <div class="htube-b-inner">
+                    <div class="htube-bl">
+                        <a class="avatar" href="#">
+                        </a>
+                        <div class="userinfo">
+                            <a class="name" href="#">@item.Username</a>
+                            <i class="uptime">@item.Worksdate</i>
+                        </div>
+                        <div class="allalbums">
+                            <div class="minealbums">
+                                <ul class="oblbums">
+                                    <li>
+                                        <div class="db">
+                                            <span class="db-name"></span>
+                                            <div class="db-like">
+                                                <i>@item.WorksCount 张图片</i>
+                                                <b>·</b>
+                                                <i id="shou"></i>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="otheralbums">
+                                <div class="readalbums"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="htube-br">
+                        <div class="pgreplydetail">
+                            <div class="itop"></div>
+                            <div class="reply-body">
+                                <a name="replytop"></a>
+                                <div id="js-reply-area" class="reply-area">
+                                    <dl class="reply-input clr">
+                                        <dt class="smile action" style="width:70px">
+
+                                            <div class="heart" id="like2" rel="like"></div>
+
+                                        </dt>
+                                        <dd class="reply-text pr">
+                                            <div class="reply-text" style="margin-top:20px">
+                                                <form id="form-cmt-reply" action="#" method="post">
+                                                    <div class="reply-editcont clr">
+                                                        <label id="txa-cmt-label" for="txa-cmt-reply" class="ipt-f" style="display: block;">发表评论...</label><textarea id="txa-cmt-reply" name="content" class="txa" style="overflow: hidden; height: 27px;" onmousedown="hidDown()"></textarea><!--评论-->
+                                                    </div>
+                                                    <div id="div1" style="display:none">
+                                                        <a id="sub-cmt-reply" class="abtn sub-cmt-reply" href="javascript:void(0);" onclick="ping()"><u>评论</u></a>
+                                                        <a class="rrp-cancle" href="javascript:void(0);" onclick="hidShow()">取消</a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="clr"></div>
+                                <div class="cmt-area">
+                                    <div id="replycont-main" class="reply-list" data-config="{&quot;c&quot;:0,&quot;r&quot;:&quot;721422508&quot;,&quot;d&quot;:&quot;815670&quot;,&quot;t&quot;:0,&quot;p&quot;:5,&quot;s&quot;:0,&quot;i&quot;:&quot;14299759&quot;,&quot;n&quot;:&quot;0&quot;}">
+                                        <div class="pbr dn" id="js-reply-page"></div>
+                                    </div>
+                                </div>
+                                <div class="cmt-more albumshowstyle dymswitch-0">
+
+                                    <!-- <a title= "专辑评论" href="javascript:;" class="album-reply">查看全部评论、赞...</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer">
+        <div class="realfoot footcont">
+            <div class="footct graylk">
+                <div class="frdlk"><a href="https://www.duitang.com/keywords/">标签集</a><a id="sitehelp" href="https://www.duitang.com/help/index/">帮助中心</a><a href="https://www.duitang.com/about/">关于我们</a><a href="https://www.duitang.com/jobs/">加入我们</a><a href="https://www.duitang.com/declare/#noduty">免责声明</a><a class="redlk" href="https://www.duitang.com/about/collectit/">堆糖收集工具</a><a href="http://www.beian.gov.cn/portal/index" class="beian1" target="_blank"></a><a href="http://www.zx110.org/picp/?sn=310105034519" class="beian" target="_blank"></a></div>
+                ©Copyright by <u class="duitang-slogo"></u> 2010-2017 duitang.com, all rights reserved
+                沪ICP备10038086号-3
+            </div>
+        </div>
+    </div>
+    <div id="win-house" class="h0">
+        <div id="contaddarea">
+            <div class="firstlev clr">
+                <div class="tag-form-content">
+                    <form id="form-mblogaddtag" method="post" onsubmit="return false;">
+                        <div class="da tag-sel-cnt tag-use-cnt clr">
+                            <input id="mbaddtagipt" class="tag-edt-ipt" autocomplete="off" type="text" value="" maxlength="100" data-optional="true">
+                        </div>
+                        <a class="abtn" href="javascript:;" style="position:absolute;bottom:20px;right:55px"><button type="submit"><u>添加</u></button></a>
+                        <input type="hidden" class="tag-edt-id" name="target_id" value="721422508">
+                        <input type="hidden" name="tags" value="">
+                        <input type="hidden" name="target_type" value="0">
+                        <input type="hidden" name="type" value="1">
+                    </form>
+                    <div class="tag-use-cnt tag-def-cnt da" id="mbaddtagsel">
+                        <a href="http://www.duitang.com/blogs/tag/?name=%E5%AE%B6%E5%B1%85">家居</a><a href="http://www.duitang.com/blogs/tag/?name=%E8%AE%BE%E8%AE%A1">设计</a><a class="locked" href="http://www.duitang.com/blogs/tag/?name=%E6%8F%92%E7%94%BB">插画</a><a href="http://www.duitang.com/blogs/tag/?name=%E7%94%B5%E5%BD%B1">电影</a><a href="http://www.duitang.com/blogs/tag/?name=%E6%97%85%E8%A1%8C">旅行</a><a href="http://www.duitang.com/blogs/tag/?name=%E6%89%8B%E5%B7%A5">手工</a><a href="http://www.duitang.com/blogs/tag/?name=%E5%A5%B3%E8%A3%85">女装</a><a href="http://www.duitang.com/blogs/tag/?name=%E7%94%B7%E8%A3%85">男装</a><a href="http://www.duitang.com/blogs/tag/?name=%E9%85%8D%E9%A5%B0">配饰</a><a href="http://www.duitang.com/blogs/tag/?name=%E7%BE%8E%E9%A3%9F">美食</a><a href="http://www.duitang.com/blogs/tag/?name=%E6%91%84%E5%BD%B1">摄影</a><a href="http://www.duitang.com/blogs/tag/?name=%E8%89%BA%E6%9C%AF">艺术</a><a href="http://www.duitang.com/blogs/tag/?name=%E5%B0%81%E9%9D%A2">封面</a><a href="http://www.duitang.com/blogs/tag/?name=%E5%8A%A8%E6%BC%AB">动漫</a><a href="http://www.duitang.com/blogs/tag/?name=%E6%80%80%E6%97%A7">怀旧</a><a href="http://www.duitang.com/blogs/tag/?name=%E8%A1%97%E6%8B%8D">街拍</a><a href="http://www.duitang.com/blogs/tag/?name=%E5%B0%8F%E5%AD%A9">小孩</a><a href="http://www.duitang.com/blogs/tag/?name=%E5%AE%A0%E7%89%A9">宠物</a><a href="http://www.duitang.com/blogs/tag/?name=%E6%A4%8D%E7%89%A9">植物</a><a href="http://www.duitang.com/blogs/tag/?name=%E4%BA%BA%E7%89%A9">人物</a>
+                    </div>
+                </div>
+                <span class="tag-tips">Tips:多个标签用逗号或回车键隔开，最多添加5个标签</span>
+            </div>
+        </div>
+    </div>
+    <input id="hid" type="hidden" value="@item.Worksid" />
+    <div id="foot-forms" class="dn">
+        <form id="form-mblogremovetag" method="post" action="https://www.duitang.com/napi/tag/delete/">
+            <input type="hidden" name="target_id" value="721422508">
+            <input type="hidden" name="target_type" value="0">
+            <input type="hidden" name="type" value="1">
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    $(function () {
+        $.ajax({
+            type: "post",
+            url: "/Home/shou",
+            data: {
+                id: $("#hid").val()
+            },
+            success: function (res) {
+                res += "人收藏";
+                $("#shou").html(res);
+            }
+        })
+    })
+    function hidDown() {
+        $("#div1").slideDown(800);//显示隐藏切换,参数可以无,参数说明同上
+    }
+    function hidShow() {
+        $("#div1").slideUp(800);//显示隐藏切换,参数可以无,参数说明同上
+    }
+</script>
+<script>
+    //点击评论时
+    function ping() {
+        $.ajax({
+            type: "post",
+            url: "/UserHome/fou",
+            success: function (res) {
+                if (res > 0) {
+                    alert("请先登录");
+                } else {
+                    pinglun();
+                }
+            }
+        })
+    }
+    function pinglun() {
+        $.ajax({
+            type: "post",
+            url: "/UserHome/pinglun",
+            data: {
+                workid: $("#hid").val(),
+                PinglunContent: $("#txa-cmt-reply").val()
+            },
+            success: function (res) {
+                if (res > 0) {
+                    alert('评论成功');
+                }
+                else {
+                    alert('评论失败');
+                }
+            }
+        })
+    }
+
+
+
+
+</script>

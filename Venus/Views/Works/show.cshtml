@@ -1,0 +1,166 @@
+﻿@{
+    ViewBag.Title = "show";
+    Layout = "~/Views/Shared/View1.cshtml";
+}
+@using VMODEL;
+@{
+    List<WorksModel> list = Model as List<WorksModel>;
+}
+
+<script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Content/jquery.masonry.min.js"></script>
+
+
+<script>
+    //$(function () {
+    //    var id = location.search;
+    //    var i = id.lastIndexOf('=');
+    //    id = id.substring(i + 1);
+    //    wor(id);
+    //})
+    ///我的作品显示
+    //function wor(i) {
+    //    $.ajax({
+    //        type: "post",
+    //        url: "/Works/showdo",
+    //        data: {
+    //            id: i
+    //        },
+    //        success: function (item) {
+    //            var str = "";
+    //            $(item).each(function (i, obj) {
+    //                $("#Userinfo").empty()
+    //                str += "<div class=\"item\" onclick='loctshow(" + obj.Worksid + ")' id=\"ii\" >";
+    //                str += "<div style=\"background-color:#ffffff\">";
+    //                str += "<img src=\"" + obj.Worksurl + "\" />";
+    //                str += "<p style=\"color:#444444;margin-bottom:5px\" class=\"divgao\">";
+    //                str += obj.Worksname;
+    //                str += "</p>";
+    //                str += " <span style=\"color:#bbbbbb\" class=\"divgao\">★</span>";
+    //                str += "<br /><div style=\"border-top:1px solid #bbbbbb;padding-top:10px;margin-top:5px;padding-bottom:10px\">";
+    //                str += "</div>  </div>     </div>";
+    //                //str += obj.Worksname;
+    //                //str += "</span><img src='";
+    //                //str += obj.Worksurl;
+    //                //str += "' class='img-responsive'/><p>";
+    //                //str += obj.Workcontent;
+    //                //str += "</p></div>";
+    //                //$("#Userinfo").append(str);
+    //            })
+    //            $("#container").append(str);
+    //        }
+    //    })
+    //}
+
+
+    function loctshow(i) {
+        location.href = "/Home/show/" + i;
+    }
+</script>
+
+
+
+<style>
+    #container img {
+        width: 224px;
+    }
+
+    #container {
+        margin-left: 130px;
+        margin-right: 150px;
+    }
+
+    #ii {
+        margin-bottom: 5px;
+        border: solid 1px #a9a59e;
+        padding: 5px;
+    }
+
+    .divgao {
+        margin-top: 10px;
+    }
+
+    .awidth {
+        margin-right: 30px;
+    }
+
+    .shadow {
+        -webkit-box-shadow: #666 0px 0px 10px;
+        -moz-box-shadow: #666 0px 0px 10px;
+        box-shadow: #666 0px 0px 10px;
+        background: #EEFF99;
+    }
+    .item{
+        width:235px;
+    }
+</style>
+
+<body>
+    <div id="container" style="padding-left:60px">
+        @foreach (var item in list)
+        {
+            <a href="/Home/show/@item.Worksid" class="awidth">
+                <div class="item shadow" id="ii">
+                    <div style="background-color:#ffffff">
+                        <img src="@item.Worksurl" />
+                        <p style="color:#444444;margin-bottom:5px" class="divgao">
+                            你说怎么好？
+                        </p>
+                        <span style="color:#bbbbbb" class="divgao">★</span>
+                        <br />
+                        <div style="border-top:1px solid #bbbbbb;padding-top:10px;margin-top:5px;padding-bottom:10px">
+                            <span class="divgao">作业</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+    <input type="button" class="bnt abtn-w3" value="加载更多" onclick="" />
+    <input type="hidden" value="1" id="hid" />
+</body>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#container').masonry({
+            // options 设置选项
+            itemSelector: '.item',//class 选择器
+            columnWidth: 240,//一列的宽度 Integer
+            isAnimated: true,//使用jquery的布局变化  Boolean
+            animationOptions: {
+                //jquery animate属性 渐变效果  Object { queue: false, duration: 500 }
+            },
+            gutterWidth: 0,//列的间隙 Integer
+            isFitWidth: true,// 适应宽度   Boolean
+            isResizableL: true,// 是否可调整大小 Boolean
+            isRTL: false,//使用从右到左的布局 Boolean
+        });
+    });
+</script>
+
+<!--js图片整理-->
+<script>
+    var $container = $('#container');
+    $container.imagesLoaded(function () {
+        $container.masonry({
+            itemSelector: '.item',
+            columnWidth: 240
+        });
+    });
+
+    $('#container').masonry('methodName', [optionalParameters])
+    masonry('destroy')// 完全移除masonry的功能 返回到元素预初始化状态
+    masonry('layout', $items, callback)// 指定项目的布局
+    masonry('option', options) //设置option
+    masonry('reloadItems') //重新聚合所有项目以当前的顺序
+    masonry('reload') //用于预先考虑或者插入项目 .masonry( 'reloadItems' )的简化版
+    masonry('remove', $items) //从masonry实例或dom中移除项目
+
+</script>
+
+
+
+<script>
+
+</script>

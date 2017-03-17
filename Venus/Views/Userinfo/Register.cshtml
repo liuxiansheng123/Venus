@@ -1,0 +1,177 @@
+﻿@{
+    ViewBag.Title = "Register";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>注册</title>
+    <link href="~/Content/Userinfo/css/reset.css" rel="stylesheet" />
+    <link href="~/Content/Userinfo/css/common.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+    <script>
+        //正则验证
+        //$(function () {
+        //    //用户名非空+正则+是否存在
+        //    $("#username").blur(function () {
+        //        var reg = /^[a-zA-Z]\w{4,17}$/;
+        //        if ($(this).val() == "") {
+        //            $("#span1").html("用户名不能为空！");
+        //            $("#span1").css("color", "red");
+        //        } else if (!reg.test($(this).val())) {
+        //            $("#span1").html("用户名格式不正确！");
+        //            $("#span1").css("color", "red");
+        //        }
+        //        else {
+        //            $("#span1").html("");
+        //        }
+        //    });
+
+        //    $("#pwd").blur(function () {
+        //        var reg = /^[a-zA-Z0-9]{4,16}$/;
+        //        if ($(this).val() == "") {
+        //            $("#span2").html("密码不能为空！");
+        //            $("#span2").css("color", "red");
+        //            return;
+        //        } else if (!reg.test($(this).val())) {
+        //            $("#span2").html("密码格式不正确！");
+        //            $("#span2").css("color", "red");
+        //            return;
+        //        } else {
+        //            $("#span2").html("");
+        //        }
+        //    });
+
+        //    $("#npwd").blur(function () {
+        //        if ($(this).val() == "") {
+        //            $("#span3").html("密码不能为空！");
+        //            $("#span3").css("color", "red");
+        //            return;
+        //        } else {
+        //            $("#span3").html("");
+        //        }
+        //        if (pwd != npwd) {
+        //            $("#span3").html("两次密码输入不一致");
+        //            $("#span3").css("color", "red");
+        //            return;
+        //        }
+        //        else {
+        //            $("#span3").html("");
+
+        //            //注册
+        function Register() {
+            var name = $("#username").val();
+            var pwd = $("#pwd").val();
+            var npwd = $("#npwd").val();
+    
+            if (name == "")
+            {
+                $("#ss").html("用户名不能为空！");
+                return;
+            }
+            else
+            {
+                $("#ss").html("");
+            }
+            if (pwd == "")
+            {
+                $("#sss").html("登陆密码不能为空");
+                return;
+            } else {
+                $("#sss").html("");
+            }
+            if (npwd == "")
+            {
+                $("#sss").html("确认密码不能为空");
+                return;
+            } else {
+                $("#sss").html("");
+            }
+            if (pwd != npwd)
+            {
+                $("#ssss").html("两次密码输入不正确");
+            }
+            else
+            {
+                $("#ssss").html("");
+            }
+            //通过验证注册
+                $.ajax({
+                    type: 'post',
+                    url: '/Userinfo/RegisterDo',
+                    data: {
+                        sname: name,
+                        spwd: pwd
+                    },
+                    success: function (res) {
+                        if (res > 2) {
+                            alert("注册成功！");
+                            location.href = "/Userinfo/index";
+                        }
+                        else if (res == 1)
+                        {
+                            alert("用户名已存在！");
+                            location.reload();
+                        }
+                        else {
+                            alert("注册失败！");
+                        }
+                    }
+                });
+            }
+    </script>
+</head>
+<body>
+    <div class="wrap login_wrap">
+        <div class="content">
+
+            <div class="logo"></div>
+
+            <div class="login_box">
+
+                <div class="login_form">
+                    <div class="login_title">
+                        注册
+                    </div>
+
+                    <br />
+                    <span id="ss" style="color:#ff0000"></span>
+                    <span id="sss" style="color:#ff0000"></span>
+                    <span id="ssss" style="color:#ff0000"></span>
+                    <span id="sssss" style="color:#ff0000"></span>
+                    <div>
+                        <input id="username" name="username" type="text" placeholder="用户名" style="width:300px;height:40px; margin-left:30px;">
+                    </div>
+                    <span id="span1" style="padding-left:30px;"></span>
+
+                    <div>
+                        <input id="pwd" name="pwd" type="password" placeholder="密码" style="width:300px;height:40px;margin-left:30px;">
+                    </div>
+                    <span id="span2" style="padding-left:30px;"></span>
+
+                    <div>
+                        <input id="npwd" name="npwd" type="password" placeholder="重复密码" style="width:300px;height:40px;margin-left:30px;">
+                    </div>
+
+                    <span id="span3" style="padding-left:30px;"></span>
+
+                    <div class="form_btn">
+                        <button type="button" onclick="Register()">注册</button>
+                    </div>
+                    <br />
+                    <div class="form_reg_btn">
+                        <span>已有帐号？</span><a href="/userinfo/index">马上登录</a>
+                    </div>
+
+                    @*<input type="text" id="t1" />
+                        <label id="lab1">*</label>*@
+                    <div class="other_login">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Content/Userinfo/js/jquery.min.js"></script>
+    <script src="~/Content/Userinfo/js/common.js"></script>
+</body>
+</html>
