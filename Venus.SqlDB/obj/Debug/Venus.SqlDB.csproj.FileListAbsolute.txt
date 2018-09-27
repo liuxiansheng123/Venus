@@ -1,0 +1,11 @@
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\bin\Debug\Venus.SqlDB.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\bin\Debug\Venus.SqlDB.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\bin\Debug\Venus.Interface.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\bin\Debug\Venus.Model.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\bin\Debug\Venus.Interface.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\bin\Debug\Venus.Model.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\obj\Debug\Venus.SqlDB.csprojAssemblyReference.cache
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\obj\Debug\Venus.SqlDB.csproj.CoreCompileInputs.cache
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\obj\Debug\Venus.SqlDB.csproj.CopyComplete
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\obj\Debug\Venus.SqlDB.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.SqlDB\obj\Debug\Venus.SqlDB.pdb

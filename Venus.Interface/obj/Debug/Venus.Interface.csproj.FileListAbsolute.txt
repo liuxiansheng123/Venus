@@ -1,0 +1,9 @@
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Interface\bin\Debug\Venus.Interface.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Interface\bin\Debug\Venus.Interface.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Interface\bin\Debug\Venus.Model.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Interface\bin\Debug\Venus.Model.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Interface\obj\Debug\Venus.Interface.csprojAssemblyReference.cache
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Interface\obj\Debug\Venus.Interface.csproj.CoreCompileInputs.cache
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Interface\obj\Debug\Venus.Interface.csproj.CopyComplete
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Interface\obj\Debug\Venus.Interface.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Interface\obj\Debug\Venus.Interface.pdb
