@@ -47,6 +47,10 @@
     <Compile Include="SqlDB.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Venus.Core\Venus.Core.csproj">
+      <Project>{29623DB5-98A2-4A56-B6A4-B5DD94211B6D}</Project>
+      <Name>Venus.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Venus.Interface\Venus.Interface.csproj">
       <Project>{A74AD7AB-4DFE-4BE4-ADE5-6565B3ED6CB0}</Project>
       <Name>Venus.Interface</Name>

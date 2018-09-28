@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Venus.Core\Venus.Core.csproj">
+      <Project>{29623db5-98a2-4a56-b6a4-b5dd94211b6d}</Project>
+      <Name>Venus.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Venus.Interface\Venus.Interface.csproj">
       <Project>{A74AD7AB-4DFE-4BE4-ADE5-6565B3ED6CB0}</Project>
       <Name>Venus.Interface</Name>

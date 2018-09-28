@@ -7,12 +7,14 @@ using System.Text;
 using Venus.Interface;
 using Venus.Model;
 using System.Reflection;
+using Venus.Core;
+
 namespace Venus.SqlDB
 {
-    public class SqlDB : SqlInterface
+    public class SqlDB : Venus.Core.Core, SqlInterface
     {
         // private  readonly string connString = ConfigurationManager.ConnectionStrings["mysql"].ToString();
-        private readonly string connString = "";
+        private static string connString = "";
 
         public bool Insert<T>(T model) where T : BaseModel
         {
@@ -174,5 +176,7 @@ namespace Venus.SqlDB
             }
             return oObject;
         }
+
+ 
     }
 }

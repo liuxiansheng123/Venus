@@ -10,15 +10,13 @@ using Venus.SqlDB;
 
 namespace UnitTest
 {
-
-
     [TestClass]
     public class UnitTest1 : SqlDB
     {
-
         [TestMethod]
         public void TestMethod1()
         {
+            UnitTest1 unitTest1 = new UnitTest1();
             int i = 0;
             TestModel Entity = new TestModel()
             {
@@ -29,13 +27,23 @@ namespace UnitTest
                 Remark = "不同寻常的奥特之星"
             };
 
-            Assert.AreEqual(base.TestInsert(Entity), true);
+            //  Assert.AreEqual(base.TestInsert(Entity), true);
 
-            var query = base.TestGetSinge<TestModel>("1");
+            //  var query = base.TestGetSinge<TestModel>("1");
 
-           
+            base.CheckIsTestorStandard(typeof(TestModel));
         }
 
+    }
+
+    [TestCategory("UnitTest1")]
+    public class UTest : UnitTest1
+    {
+        [TestMethod]
+        public void TestMethod2()
+        {
+            // base.CheckIsTestorStandard(typeof(UTest));
+        }
 
     }
 }

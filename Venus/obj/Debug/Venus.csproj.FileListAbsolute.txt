@@ -2,8 +2,6 @@ C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\zh-Hans\Micro
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
-C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
-C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\Venus.dll.config
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\Venus.dll
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\Venus.pdb
@@ -65,3 +63,5 @@ C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\obj\Debug\Venus.c
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\obj\Debug\Venus.csproj.CopyComplete
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\obj\Debug\Venus.dll
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\obj\Debug\Venus.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\Venus.Core.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus\bin\Venus.Core.pdb

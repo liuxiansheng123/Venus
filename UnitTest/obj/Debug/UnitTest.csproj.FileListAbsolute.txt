@@ -21,3 +21,5 @@ C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\UnitTest\obj\Debug\Unit
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\UnitTest\obj\Debug\UnitTest.csproj.CopyComplete
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\UnitTest\obj\Debug\UnitTest.dll
 C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\UnitTest\bin\Debug\Venus.Core.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\UnitTest\bin\Debug\Venus.Core.pdb
