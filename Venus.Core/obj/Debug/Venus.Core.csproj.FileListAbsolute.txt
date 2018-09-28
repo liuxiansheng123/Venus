@@ -1,0 +1,6 @@
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Core\bin\Debug\Venus.Core.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Core\bin\Debug\Venus.Core.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Core\obj\Debug\Venus.Core.csprojAssemblyReference.cache
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Core\obj\Debug\Venus.Core.csproj.CoreCompileInputs.cache
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Core\obj\Debug\Venus.Core.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\Venus.Core\obj\Debug\Venus.Core.pdb

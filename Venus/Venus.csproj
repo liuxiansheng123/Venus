@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -533,9 +535,17 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UnitTest\UnitTest.csproj">
+      <Project>{76e64d17-e488-4b72-bb46-fac55e5a8e3a}</Project>
+      <Name>UnitTest</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VBLL\VBLL.csproj">
       <Project>{0e7ce73d-455f-44b1-ade1-9eacfad475b0}</Project>
       <Name>VBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Venus.SqlDB\Venus.SqlDB.csproj">
+      <Project>{b78f1b05-4fa6-4183-8958-31953496c229}</Project>
+      <Name>Venus.SqlDB</Name>
     </ProjectReference>
     <ProjectReference Include="..\VMODEL\VMODEL.csproj">
       <Project>{5f1562db-c71e-4df5-bd32-d5c818ef7525}</Project>
