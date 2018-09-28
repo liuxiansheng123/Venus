@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venus", "Venus\Venus.csproj", "{60CFA04E-D688-49F4-9E91-916EBE3F6C64}"
 EndProject
@@ -10,6 +10,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VDAL", "VDAL\VDAL.csproj", "{6FF0E3FF-1014-447D-BDB7-74179992607C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VBLL", "VBLL\VBLL.csproj", "{0E7CE73D-455F-44B1-ADE1-9EACFAD475B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venus.Core", "Venus.Core\Venus.Core.csproj", "{29623DB5-98A2-4A56-B6A4-B5DD94211B6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venus.Interface", "Venus.Interface\Venus.Interface.csproj", "{A74AD7AB-4DFE-4BE4-ADE5-6565B3ED6CB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venus.Model", "Venus.Model\Venus.Model.csproj", "{450C0B6B-7E46-482D-A121-54FCFB9D5F54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Venus.SqlDB", "Venus.SqlDB\Venus.SqlDB.csproj", "{B78F1B05-4FA6-4183-8958-31953496C229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{76E64D17-E488-4B72-BB46-FAC55E5A8E3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,8 +43,31 @@ Global
 		{0E7CE73D-455F-44B1-ADE1-9EACFAD475B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E7CE73D-455F-44B1-ADE1-9EACFAD475B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E7CE73D-455F-44B1-ADE1-9EACFAD475B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29623DB5-98A2-4A56-B6A4-B5DD94211B6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29623DB5-98A2-4A56-B6A4-B5DD94211B6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29623DB5-98A2-4A56-B6A4-B5DD94211B6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29623DB5-98A2-4A56-B6A4-B5DD94211B6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A74AD7AB-4DFE-4BE4-ADE5-6565B3ED6CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74AD7AB-4DFE-4BE4-ADE5-6565B3ED6CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74AD7AB-4DFE-4BE4-ADE5-6565B3ED6CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74AD7AB-4DFE-4BE4-ADE5-6565B3ED6CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450C0B6B-7E46-482D-A121-54FCFB9D5F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450C0B6B-7E46-482D-A121-54FCFB9D5F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450C0B6B-7E46-482D-A121-54FCFB9D5F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450C0B6B-7E46-482D-A121-54FCFB9D5F54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B78F1B05-4FA6-4183-8958-31953496C229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B78F1B05-4FA6-4183-8958-31953496C229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B78F1B05-4FA6-4183-8958-31953496C229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B78F1B05-4FA6-4183-8958-31953496C229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76E64D17-E488-4B72-BB46-FAC55E5A8E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E64D17-E488-4B72-BB46-FAC55E5A8E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E64D17-E488-4B72-BB46-FAC55E5A8E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E64D17-E488-4B72-BB46-FAC55E5A8E3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84E3272D-B7A9-4D15-AF27-CEFCC24C2E63}
 	EndGlobalSection
 EndGlobal

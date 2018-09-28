@@ -1,0 +1,9 @@
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VDAL\bin\Debug\VDAL.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VDAL\bin\Debug\VDAL.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VDAL\bin\Debug\VMODEL.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VDAL\bin\Debug\VMODEL.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VDAL\obj\Debug\VDAL.csprojAssemblyReference.cache
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VDAL\obj\Debug\VDAL.csproj.CoreCompileInputs.cache
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VDAL\obj\Debug\VDAL.csproj.CopyComplete
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VDAL\obj\Debug\VDAL.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VDAL\obj\Debug\VDAL.pdb

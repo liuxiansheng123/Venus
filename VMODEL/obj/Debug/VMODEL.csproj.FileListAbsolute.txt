@@ -1,0 +1,5 @@
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VMODEL\bin\Debug\VMODEL.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VMODEL\bin\Debug\VMODEL.pdb
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VMODEL\obj\Debug\VMODEL.csproj.CoreCompileInputs.cache
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VMODEL\obj\Debug\VMODEL.dll
+C:\Users\10426\Desktop\privatePlan\新建文件夹\Venus\VMODEL\obj\Debug\VMODEL.pdb
